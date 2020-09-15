@@ -1,12 +1,12 @@
 <h1>Top page</h1>
-<%= link_to '新規投稿', '/posts/new' %> <!-- ヘルパーメソッドhtmlのaタグの代わり 前の''に表示する文字列、後ろの''にリンク先のURL -->
-<% @posts.each do |post|  %>  <!-- eachメソッド（配列が使えるループ処理） 仮引数postには@posts内のデータが実引数として渡され、以下でカラム名を呼び出してる -->
+<%= link_to '新規投稿', '/posts/new' %> 
+<% @posts.each do |post|  %>  
   <div class="post">
     <div class="post-date">
-      投稿日時：<%= post.created_at %> <!-- post変数（@postsの配列データ内の一つの要素、Postテーブルのレコードの内容が入っている）内のcreatede_atがキーのデータを取り出し -->
+      投稿日時：<%= post.created_at %> 
     </div>
     <div class="post-content">
-      <%= post.content %><!--@postsはpostsコントローラーで定義されている。-->
+      <%= post.content %>
     </div>
   </div>
-<% end %><!--<%= %>はブラウザに表示するものに使い、<% %>はブラウザに表示しないものに使う！-->
+<% end %>

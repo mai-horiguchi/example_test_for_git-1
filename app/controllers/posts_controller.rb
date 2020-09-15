@@ -1,14 +1,14 @@
-class PostsController < ApplicationController #コントローラーファイル。ルーティングでpostsの処理が指定されたときに使われる。
+class PostsController < ApplicationController 
 
-  def index #indexアクションが定義されている。URI postsのリクエストがあればindexアクションを実行するという意味。
-    @posts = Post.all #すべてのレコードを@postsに代入.allはActiveRecordメソッド
-  end #allはテーブル内のすべてのレコードを取得するときに使う。findはテーブル内の該当するレコードを取得する。
+  def index 
+    @posts = Post.all 
+  end 
 
-  def new#newアクションを定義
+  def new
   end
 
   def create
-    Post.create(content: params[:content])#postテーブルに保存する、保存する内容はparams内のcontent:のデータ
+    Post.create(content: params[:content])
   end
 
 

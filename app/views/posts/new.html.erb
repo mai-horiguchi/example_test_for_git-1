@@ -1,5 +1,5 @@
 <h1>新規投稿ページ</h1>
-<%= form_with url: "/posts", method: :post, local: true do |form| %> <!-- ヘルパーメソッドRubyとして扱われる。url:~部分はリクエストを送信するURL、method:~はHTTPメソッドを指定 -->
-  <%= form.text_field :content %> <!-- フォーム部品のヘルパーメソッドtext_fieldテキスト入力 :contentはDBのカラム名からとってる -->
-  <%= form.submit '投稿する' %> <!-- ヘルパーメソッドsubmit送信ボタン ''の間にボタンの内容を入力 -->
+<%= form_with url: "/posts", method: :post, local: true do |form| %> 
+  <%= form.text_field :content %> 
+  <%= form.submit '投稿する' %> 
 <% end %>
